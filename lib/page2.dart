@@ -45,7 +45,7 @@ class Page2 extends StatelessWidget {
               const SizedBox(height: 20), // Jarak antara profil dan card
               _buildCard(context, "About", "Muhammad Alfar Ramazan Putra Faizal, seorang yang baik hati, rajin, suka menolong, tidak pernah berkata kasar, dan tidak sombong."),
               _buildCard(context, "History", "Saya menempuh pendidikan dasar di SDN Gadog 06. Setelah itu, saya melanjutkan ke SMPIT Roudlothul Jannah dan masih menempuh pendidikan di SMK Wikrama Bogor."),  
-              _buildCard(context, "Skill", "Saya memilih sebagai seorang Back-End Developer, saya memiliki skill di bahasa pemograman JavaScript(express), Laravel, dan MySQL."),
+              _buildCard(context, "Skill", "Saya memilih sebagai seorang Back-End Developer, saya memiliki skill di bahasa pemrograman JavaScript(express), Laravel, dan MySQL."),
             ],
           ),
         ),
