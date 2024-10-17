@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   CircleAvatar(
                     radius: 60,
                     onBackgroundImageError: (exception, stackTrace) => null,
-                    backgroundImage: AssetImage('assets/images/komeg.png'),
+                    backgroundImage: AssetImage('assets/images/logo-wk.jpg'),
                   ),
                   SizedBox(height: 50),
 
