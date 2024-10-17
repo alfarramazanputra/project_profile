@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Page2 extends StatelessWidget {
@@ -7,6 +9,7 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true, // Menjadikan AppBar di atas konten
+      resizeToAvoidBottomInset: false, // Mencegah overflow ketika keyboard muncul
       appBar: AppBar(
         backgroundColor: Colors.transparent, // Membuat AppBar transparan
         elevation: 0, // Menghilangkan bayangan
@@ -20,10 +23,9 @@ class Page2 extends StatelessWidget {
       body: SingleChildScrollView( 
         child: Container(
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/bg.jpeg'),
+              image: AssetImage('assets/images/paten.jpeg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -40,7 +42,8 @@ class Page2 extends StatelessWidget {
               const SizedBox(height: 10), // Jarak antara profil dan teks nama
               const Text(
                 "Muhammad Alfar Ramazan Putra. F", 
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+                textAlign: TextAlign.center, // Menjadikan teks di tengah
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black),
               ),
               const SizedBox(height: 20), // Jarak antara profil dan card
               _buildCard(context, "About", "Muhammad Alfar Ramazan Putra Faizal, seorang yang baik hati, rajin, suka menolong, tidak pernah berkata kasar, dan tidak sombong."),
@@ -59,7 +62,7 @@ class Page2 extends StatelessWidget {
       child: ConstrainedBox(
         constraints: BoxConstraints(
           maxWidth: 300,  // Ukuran tetap untuk lebar card
-          minHeight: 100, // Ukuran minimum untuk tinggi card, sehingga card tidak terlalu tinggi
+          minHeight: 100, // Ukuran minimum untuk tinggi card
         ),
         child: Card(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
